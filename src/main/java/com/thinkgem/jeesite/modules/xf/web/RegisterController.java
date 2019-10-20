@@ -26,7 +26,7 @@ public class RegisterController {
 	public String register(@RequestBody Register register) {
 		
 		User u1 = systemService.getUserByMobile(register.getMobile());
-		if(u1 != null) {//手机号已注册
+		if(u1 != null) {//手机号已经注册
 			return "1";
 		}
 		
